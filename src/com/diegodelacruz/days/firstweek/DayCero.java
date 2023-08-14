@@ -1,4 +1,4 @@
-package com.diegodelacruz.days;
+package com.diegodelacruz.days.firstweek;
 
 import java.util.Scanner;
 
