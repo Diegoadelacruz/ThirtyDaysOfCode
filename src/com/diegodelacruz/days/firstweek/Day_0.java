@@ -2,7 +2,7 @@ package com.diegodelacruz.days.firstweek;
 
 import java.util.Scanner;
 
-public class DayCero {
+public class Day_0 {
 
     public static void main(String[] args) {
         // Create a Scanner object to read input from stdin.

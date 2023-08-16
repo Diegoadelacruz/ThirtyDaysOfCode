@@ -8,7 +8,7 @@ import java.util.Scanner;
 * Print the sum of  plus your double variable to a scale of one decimal place on a new line.
 * Concatenate  with the string you read as input and print the result on a new line.
  */
-public class DayOne {
+public class Day_1 {
 
     public static void main(String[] args) {
         int i = 4;
