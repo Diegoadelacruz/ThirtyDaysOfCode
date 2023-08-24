@@ -1,5 +1,7 @@
 package com.diegodelacruz.days.firstweek;
 
+import java.util.Scanner;
+
 /**
  * Given a string, S, of length N that is indexed from 0 to N -1 ,
  * print its even-indexed and odd-indexed characters as 2 space-separated
@@ -14,18 +16,20 @@ public class Day_6 {
      */
     public static void main(String[] args) {
 
-        int space = 2;
-        String firstString = "Hacker";
-        String secondString = "Rank";
+        Scanner scan = new Scanner(System.in);
 
-        String result1 = loopThroughString(firstString, space);
-        String result2 = loopThroughString(secondString, space);
-        System.out.println(result1);
-        System.out.println(result2);
-
+        System.out.println("Introduce spaces: ");
+        int space = scan.nextInt();
+        scan.nextLine();
+        while (scan.hasNextLine()) {
+            String anyString = scan.nextLine();
+            String result = loopThroughString(anyString);
+            System.out.println(result);
+        }
+        scan.close();
     }
 
-    private static String loopThroughString(String anyString, int space) {
+    private static String loopThroughString(String anyString) {
         char[] stringCharArray = anyString.toCharArray();
         StringBuilder odds = new StringBuilder();
         StringBuilder even = new StringBuilder();
@@ -42,7 +46,7 @@ public class Day_6 {
             }
         }
         result.append(even);
-        result.append(" ".repeat(space - 1));
+        result.append(" ".repeat(1));
         result.append(odds);
         return result.toString();
     }
