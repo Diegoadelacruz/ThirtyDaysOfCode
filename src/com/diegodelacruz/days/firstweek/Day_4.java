@@ -1,5 +1,7 @@
 package com.diegodelacruz.days.firstweek;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -18,27 +20,27 @@ public class Day_4 {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int ages = scan.nextInt();
-        int age = 1;
-
-        scan.nextLine();
-
-        do {
-            int anyInt = scan.nextInt();
-            Person person = new Person(anyInt);
-            ages--;
-        } while (ages < age);
+        int age = scan.nextInt();
+        List<Integer> listInt = new ArrayList<>();
+        int counter = 0;
+        while (counter < age && scan.hasNextLine()) {
+            int scanInt = scan.nextInt();
+            listInt.add(scanInt);
+            counter++;
+        }
         scan.close();
 
-
+        for (int initialAge : listInt) {
+            new Person(initialAge);
+        }
     }
 
 
-    static class Person {
+    private static class Person {
 
         int age;
 
-        public Person(int initialAge) {
+        private Person(int initialAge) {
             initialAge = age;
 
             if (initialAge < 0) {
@@ -46,13 +48,15 @@ public class Day_4 {
                 System.out.println("Age is not valid, setting age to 0.");
             }
 
+            yearPasses(age);
+            amIOld(age);
         }
 
-        void yearPasses() {
+        void yearPasses(int age) {
             age++;
         }
 
-        void amIOld() {
+        void amIOld(int age) {
             if (age < 13) {
                 System.out.println("You are young.");
             } else if (age >= 13 && age < 18) {
