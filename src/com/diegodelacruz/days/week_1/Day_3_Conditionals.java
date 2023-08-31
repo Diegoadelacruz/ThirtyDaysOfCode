@@ -1,4 +1,4 @@
-package com.diegodelacruz.days.firstweek;
+package com.diegodelacruz.days.week_1;
 
 
 /**
@@ -9,7 +9,7 @@ package com.diegodelacruz.days.firstweek;
  * If  is even and greater than 20, print Not Weird
  */
 
-public class Day_3 {
+public class Day_3_Conditionals {
 
     public static void main(String[] args) {
         int N = 18;

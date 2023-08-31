@@ -1,8 +1,8 @@
-package com.diegodelacruz.days.firstweek;
+package com.diegodelacruz.days.week_1;
 
 import java.util.Scanner;
 
-public class Day_0 {
+public class Day_0_HelloWorld {
 
     public static void main(String[] args) {
         // Create a Scanner object to read input from stdin.

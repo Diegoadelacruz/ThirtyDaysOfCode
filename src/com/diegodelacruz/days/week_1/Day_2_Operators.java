@@ -1,4 +1,4 @@
-package com.diegodelacruz.days.firstweek;
+package com.diegodelacruz.days.week_1;
 
 /*
  * Given the meal price (base cost of a meal),
@@ -6,7 +6,7 @@ package com.diegodelacruz.days.firstweek;
  * and tax percent (the percentage of the meal price being added as tax)
  * for a meal, find and print the meal's total cost. Round the result to the nearest integer.
  * */
-public class Day_2 {
+public class Day_2_Operators {
 
 
     /*
@@ -31,7 +31,7 @@ public class Day_2 {
         double meal_cost = 100;
         int tip_percent = 15;
         int tax_percent = 8;
-        Day_2.solve(meal_cost, tip_percent, tax_percent);
+        Day_2_Operators.solve(meal_cost, tip_percent, tax_percent);
     }
 
 }

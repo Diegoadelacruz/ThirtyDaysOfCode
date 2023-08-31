@@ -1,4 +1,4 @@
-package com.diegodelacruz.days.firstweek;
+package com.diegodelacruz.days.week_1;
 
 import java.util.Scanner;
 
@@ -7,7 +7,7 @@ import java.util.Scanner;
  * print its even-indexed and odd-indexed characters as 2 space-separated
  * strings on a single line (see the Sample below for more detail).
  */
-public class Day_6 {
+public class Day_6_LetsReview {
 
     /**
      * Example

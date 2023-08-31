@@ -1,4 +1,4 @@
-package com.diegodelacruz.days.firstweek;
+package com.diegodelacruz.days.week_1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,12 +11,12 @@ import java.util.Scanner;
  * if a negative argument is passed as initialAge, the constructor should set age to 0 and
  * print "Age is not valid, setting age to 0".In addition, you must write the following instance methods:
  * yearPasses() should increase the  instance variable by .
- * amIOld() should perform the following conditional actions:
+ * amIOld() should perform the following conditional actions:R
  * If age < 13, print "You are young.".
  * If  and , print "You are a teenager.".
  * Otherwise, print "You are old.".
  */
-public class Day_4 {
+public class Day_4_ClassVsInstance {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -31,7 +31,9 @@ public class Day_4 {
         scan.close();
 
         for (int initialAge : listInt) {
-            new Person(initialAge);
+            Person person = new Person(initialAge);
+            person.yearPasses(initialAge);
+            person.amIOld(initialAge);
         }
     }
 
@@ -41,15 +43,11 @@ public class Day_4 {
         int age;
 
         private Person(int initialAge) {
-            initialAge = age;
 
             if (initialAge < 0) {
                 age = 0;
                 System.out.println("Age is not valid, setting age to 0.");
             }
-
-            yearPasses(age);
-            amIOld(age);
         }
 
         void yearPasses(int age) {
