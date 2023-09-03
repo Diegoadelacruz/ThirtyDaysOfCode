@@ -24,19 +24,16 @@ public class Day_8_Maps {
      */
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int counter = 1;
-        Map<String, Integer> phoneBook = new HashMap<>();
-
-        System.out.println("Introduce phone numbers: ");
+        System.out.println();
         int phoneNums = scanner.nextInt();
-        scanner.nextLine();
+        Map<String, Long> phoneBook = new HashMap<>();
+        int counter = 0;
 
-        while (scanner.hasNextLine() || counter >= phoneNums) {
-            String contact = scanner.nextLine();
-            Integer number = scanner.nextInt();
-            phoneBook.put(contact, number);
-            counter ++;
+        while (counter < phoneNums && scanner.hasNextLine()) {
+            phoneBook.put("diego", 1234567890L);
+            counter++;
         }
-        System.out.println(phoneBook);
+        scanner.close();
+
     }
 }
