@@ -9,7 +9,7 @@ import java.util.List;
  * number of consecutive 1's in n's binary representation.
  * When working with different bases, it is common to show the base as a subscript.
  */
-public class Java_10_BinaryNumbers {
+public class Day_10_BinaryNumbers {
 
     /**
      * Example:
