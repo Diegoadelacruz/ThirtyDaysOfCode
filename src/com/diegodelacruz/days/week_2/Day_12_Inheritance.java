@@ -2,35 +2,69 @@ package com.diegodelacruz.days.week_2;
 
 public class Day_12_Inheritance {
 
-    class Person {
+    public static void main(String[] args) {
+        int[] testScores = new int[]{90, 70};
+        Student s = new Student("Diego", "de la Cruz", 9, testScores);
+        s.printPerson();
+        System.out.println("Grade: " + s.calculate());
+    }
+}
 
+class Person {
+
+    String firstName;
+
+    String lastName;
+
+    int idNumber;
+
+    Person(String firstName, String lastName, int identification) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.idNumber = identification;
     }
 
-    class Student extends Person {
+    public void printPerson() {
+        System.out.println(
+                "Name: " + lastName + ", " + firstName
+                        + "\nID: " + idNumber);
+    }
+}
 
-        String firstName;
+class Student extends Person {
 
-        String lastName;
+    int[] testScores;
 
-        int idNumber;
+    Student(String firstName, String lastName, int idNumber, int[] testScores) {
+        super(firstName, lastName, idNumber);
+        this.testScores = testScores;
+    }
 
-        int[] scores;
+    char calculate() {
+        int a = 0;
 
+        for (int i : testScores)
+            a += i;
 
-        Student(String firstName, String lastName, int idNumber, int[] scores) {
-            super();
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.idNumber = idNumber;
-            this.scores = scores;
+        int average = a / testScores.length;
+
+        if (average <= 100 && average >= 90) {
+            return 'O';
+        } else if (average < 90 && average >= 80) {
+            return 'E';
+        } else if (average < 80 && average >= 70) {
+            return 'A';
+        } else if (average < 70 && average >= 55) {
+            return 'P';
+        } else if (average < 55 && average >= 40) {
+            return 'D';
+        } else {
+            return 'T';
         }
-
-        void calculate(int average){
-
-        }
-
     }
 
 }
+
+
 
 
